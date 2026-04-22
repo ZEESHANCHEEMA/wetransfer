@@ -1,1 +1,1 @@
-export { ChoosePartnerScreen as default } from '../src/router/screens';
+export { default } from '../src/screens/onboarding/ChoosePartnerScreen';

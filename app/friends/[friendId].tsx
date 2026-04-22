@@ -1,1 +1,1 @@
-export { FriendDetailScreen as default } from '../../src/router/screens';
+export { default } from '../../src/screens/friends/FriendDetailScreen';

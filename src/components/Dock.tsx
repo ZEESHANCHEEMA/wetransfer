@@ -6,7 +6,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { RootStackParamList } from '../navigation/types';
-import { colors } from '../theme';
+import { alpha, colors } from '../theme';
 
 const tabs = [
   { key: 'Home', label: 'home', icon: Home },
@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.45)',
-    backgroundColor: 'rgba(245,243,240,0.96)',
+    borderColor: alpha.dockBorder,
+    backgroundColor: alpha.dockBackgroundStrong,
     borderRadius: 24,
     paddingVertical: 10,
-    shadowColor: '#000',
+    shadowColor: colors.black,
     shadowOpacity: 0.08,
     shadowRadius: 16,
     shadowOffset: { width: 0, height: 8 },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     borderRadius: 18,
   },
   activeTab: {
-    backgroundColor: 'rgba(232,146,124,0.12)',
+    backgroundColor: alpha.activePill,
   },
   label: {
     color: colors.textSoft,

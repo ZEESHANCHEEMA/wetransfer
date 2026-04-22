@@ -1,1 +1,1 @@
-export { LoginScreen as default } from '../src/router/screens';
+export { default } from '../src/screens/auth/LoginScreen';

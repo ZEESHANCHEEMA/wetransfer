@@ -1,1 +1,1 @@
-export { UsageScreen as default } from '../src/router/screens';
+export { default } from '../src/screens/usage/UsageScreen';

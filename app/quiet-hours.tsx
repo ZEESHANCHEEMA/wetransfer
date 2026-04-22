@@ -1,1 +1,1 @@
-export { QuietHoursScreen as default } from '../src/router/screens';
+export { default } from '../src/screens/onboarding/QuietHoursScreen';

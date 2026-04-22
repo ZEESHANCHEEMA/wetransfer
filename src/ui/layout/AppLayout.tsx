@@ -1,7 +1,8 @@
 import { Stack, useRouter } from 'expo-router';
 import { ArrowLeft } from 'lucide-react-native';
 import React, { ReactNode } from 'react';
-import { Pressable, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { colors } from '../../theme';
 import { Dock } from './Dock';
@@ -19,13 +20,14 @@ type AppLayoutProps = {
 
 export const AppLayout = ({ title, children, scroll = true, withDock = false, showBack = false, onBack, right }: AppLayoutProps) => {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const content = scroll ? <ScrollView contentContainerStyle={styles.scroll}>{children}</ScrollView> : <View style={styles.body}>{children}</View>;
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={['left', 'right']}>
       <Stack.Screen options={{ headerShown: false }} />
       {(title || showBack || right) && (
-        <View style={styles.header}>
+        <View style={[styles.header, { paddingTop: Math.max(insets.top, 8) }]}>
           <View style={styles.headerLeft}>
             {showBack ? (
               <Pressable onPress={onBack ?? (() => router.back())} style={styles.iconButton}>

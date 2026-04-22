@@ -1,1 +1,1 @@
-export { ChooseModeScreen as default } from '../src/router/screens';
+export { default } from '../src/screens/onboarding/ChooseModeScreen';

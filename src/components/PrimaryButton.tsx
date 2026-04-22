@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   disabled: {
-    backgroundColor: '#ebe8e3',
+    backgroundColor: colors.surfaceAlt,
   },
   text: {
-    color: '#fff',
+    color: colors.white,
     fontSize: 16,
     fontWeight: '600',
     textTransform: 'lowercase',
